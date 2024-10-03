@@ -42,5 +42,32 @@
 			"type"		"CheckBox"
 			"default"	"1"
 		}
+				
+		4
+		{
+			"name"		"ROUNDS_PER_MAP"
+			"text"		"Round Per Map"
+			"help"		"Sets the amount of rounds to play per map"
+			"type"		"Numeric"
+			"default"	"10"
+		}
+				
+		5
+		{
+			"name"		"ROUND_TIME"
+			"text"		"Round Time"
+			"help"		"Amount of time each round should last in seconds"
+			"type"		"Numeric"
+			"default"	"300"
+		}
+				
+		6
+		{
+			"name"		"HUNTER_BLINDLOCK_TIME"
+			"text"		"Hunter Blindlock Time"
+			"help"		"How long should the hunter be blinded and locked for when the round starts in seconds"
+			"type"		"Numeric"
+			"default"	"30"
+		}
 	}
 }
