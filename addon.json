@@ -1,14 +1,17 @@
 {
-	"title"		:	"Prop Hunt",
-	"type"		:	"gamemode",
-	"tags"		:	[ "fun", "roleplay" ],
-	"ignore"	:
-	[
-		"*.psd",
-		"*.vcproj",
-		"*.md",
-		".git",
-		".gitignore",
-		"*.svn*"
-	]
+    "title": "Prop Hunt Custom",
+    "type": "gamemode",
+    "tags": [
+        "fun",
+        "roleplay"
+    ],
+    "ignore": [
+        "*.psd",
+        "*.vcproj",
+        "*.md",
+        ".git",
+        ".gitignore",
+        "*.svn*"
+    ],
+    "description": "Fork of the orignal Prop Hunt, allows modification of different attributes such as number of rounds and player speed / jump height."
 }
