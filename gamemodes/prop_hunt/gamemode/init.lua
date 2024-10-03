@@ -90,6 +90,8 @@ addModel("combineprison")
 addModel("combineelite")
 addModel("police")
 
+local default_hunter_models = CreateConVar("ph_default_hunter_models","0",{FCVAR_REPLICATED, FCVAR_ARCHIVE},0,1)
+
 function GM:PlayerSetModel(pl)
 	-- set antlion gib small for Prop model. Do not change into others because this might purposed as a hitbox.
 	local player_model = "models/Gibs/Antlion_gib_small_3.mdl"
@@ -105,7 +107,7 @@ function GM:PlayerSetModel(pl)
 	local modelname = player_manager.TranslatePlayerModel( cl_playermodel )
 	
 	-- for Hunter only
-    if pl:Team() == TEAM_HUNTERS then
+    if pl:Team() == TEAM_HUNTERS && default_hunter_models then
 				player_model = modelname
     end
 	
