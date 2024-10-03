@@ -2,9 +2,8 @@
 Prop Hunt plays much like a Hide and Seek. Players on the RED team, disguised as props, are given a 30 second set up time to hide, and afterwards players on the BLUE team must find and kill them in the given time period. At the end of each round, teams are swapped: Hunters (BLUE) become the Hunted (RED) and vice versa. Respawns aren’t permitted until the end of each round. 
 -Originally made for TF2 - 
 
-## PLEASE READ THIS - PLEASE READ THIS - PLEASE READ THIS - PLEASE READ THIS ##
-I still have issues supporting this H&S mod cause of my little free time, sorry! I'll do my best. 
-They might not work correctly with this/other mod/s on the workshop or they also might not work at all, damage your PC, burn your house down with lemons or even kill your cat. (Yep, true story!) 
+## Note ##
+This is a fork of the original, with the intent of adding the ability to change some basic values, such as amount of rounds and player speed / jump height. There will be no addtional features beyond this
 
 ## Known issues ##
 ATTENTION! the addons "Post Processing PLUS" and "Player Weld Tool" are incompatible and have conflicts with the "Prop Hunt" mod if you have the "Post Processing PLUS" and "Player Weld Tool" addons enabled you cannot play the Prop Hunt mod, 
