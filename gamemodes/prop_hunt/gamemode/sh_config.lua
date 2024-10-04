@@ -11,7 +11,7 @@ BANNED_PROP_MODELS = {
 
 
 -- Maximum time (in minutes) for this fretta gamemode (Default: 30)
-GAME_TIME = 30
+GAME_TIME = 300
 
 
 -- Number of seconds hunters are blinded/locked at the beginning of the map (Default: 30)
