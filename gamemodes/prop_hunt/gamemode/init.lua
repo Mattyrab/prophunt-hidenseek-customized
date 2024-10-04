@@ -90,6 +90,7 @@ addModel("combineprison")
 addModel("combineelite")
 addModel("police")
 
+-- Enable usage of default models
 local default_hunter_models = CreateConVar("ph_default_hunter_models","0",{FCVAR_REPLICATED, FCVAR_ARCHIVE},0,1)
 
 function GM:PlayerSetModel(pl)
