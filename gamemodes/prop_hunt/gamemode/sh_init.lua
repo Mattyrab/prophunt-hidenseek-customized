@@ -33,9 +33,10 @@ Both teams can press [F3] to play a taunt sound.]]
 
 CVAR_SERVER_ONLY_NO_NOTIFY 	= FCVAR_REPLICATED + FCVAR_ARCHIVE
 
-CreateClientConVar("ph_gametime", GAME_TIME, CVAR_SERVER_ONLY_NO_NOTIFY, "Set game time in minutes")
-CreateClientConVar("ph_roundtime", ROUNDS_PER_MAP, CVAR_SERVER_ONLY_NO_NOTIFY, "Set round time in seconds")
-CreateClientConVar("ph_rounds_per_map", ROUND_TIME, CVAR_SERVER_ONLY_NO_NOTIFY, "Set amount of round to play per map")
+CreateClientConVar("ph_gametime", tostring(GAME_TIME), CVAR_SERVER_ONLY_NO_NOTIFY, "Set game time in minutes")
+CreateClientConVar("ph_roundtime", tostring(ROUND_TIME), CVAR_SERVER_ONLY_NO_NOTIFY, "Set round time in seconds")
+CreateClientConVar("ph_rounds_per_map", tostring(ROUNDS_PER_MAP), CVAR_SERVER_ONLY_NO_NOTIFY, "Set amount of round to play per map")
+
 
 
 -- Fretta configuration
