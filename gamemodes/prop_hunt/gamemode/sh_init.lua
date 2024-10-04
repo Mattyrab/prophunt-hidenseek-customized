@@ -29,6 +29,14 @@ As a Hunter you will be blindfolded for the first ]]..HUNTER_BLINDLOCK_TIME..[[ 
 
 Both teams can press [F3] to play a taunt sound.]]
 
+-- Convars
+
+CVAR_SERVER_ONLY_NO_NOTIFY 	= FCVAR_REPLICATED + FCVAR_ARCHIVE
+
+CreateClientConVar("ph_gametime", GAME_TIME, CVAR_SERVER_ONLY_NO_NOTIFY, "Set game time in minutes")
+CreateClientConVar("ph_roundtime", ROUNDS_PER_MAP, CVAR_SERVER_ONLY_NO_NOTIFY, "Set round time in seconds")
+CreateClientConVar("ph_rounds_per_map", ROUND_TIME, CVAR_SERVER_ONLY_NO_NOTIFY, "Set amount of round to play per map")
+
 
 -- Fretta configuration
 GM.AddFragsToTeamScore		= true
@@ -36,13 +44,13 @@ GM.CanOnlySpectateOwnTeam 	= true
 GM.ValidSpectatorModes 		= { OBS_MODE_CHASE, OBS_MODE_IN_EYE, OBS_MODE_ROAMING }
 GM.Data 					= {}
 GM.EnableFreezeCam			= true
-GM.GameLength				= GAME_TIME
+GM.GameLength				= GetConVar("ph_gametime")
 GM.NoAutomaticSpawning		= true
 GM.NoNonPlayerPlayerDamage	= true
 GM.NoPlayerPlayerDamage 	= true
 GM.RoundBased				= true
-GM.RoundLimit				= ROUNDS_PER_MAP
-GM.RoundLength 				= ROUND_TIME
+GM.RoundLimit				= GetConVar("ph_rounds_per_map")
+GM.RoundLength 				= GetConVar("ph_roundtime")
 GM.RoundPreStartTime		= 0
 GM.SelectModel				= false
 GM.SuicideString			= "suicided or died mysteriously."
