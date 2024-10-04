@@ -11,11 +11,8 @@ CreateConVar("ph_prop_jumppower","200", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
 
 -- Some settings for the class
 CLASS.DisplayName			= "Prop"
-CLASS.WalkSpeed 			= GetConVar("ph_prop_walkspeed")
 CLASS.CrouchedWalkSpeed 	= 0.2
-CLASS.RunSpeed				= GetConVar("ph_prop_runspeed")
 CLASS.DuckSpeed				= 0.2
-CLASS.JumpPower				= GetConVar("ph_prop_jumppower")
 CLASS.DrawTeamRing			= false
 
 
@@ -38,6 +35,10 @@ function CLASS:OnSpawn(pl)
 	pl.ph_prop:SetOwner(pl)
 	
 	pl.ph_prop.max_health = 100
+
+	pl.SetWalkSpeed 			= GetConVar("ph_prop_walkspeed")
+	pl.SetRunSpeed				= GetConVar("ph_prop_runspeed")
+	pl.SetJumpPower				= GetConVar("ph_prop_jumppower")
 end
 
 

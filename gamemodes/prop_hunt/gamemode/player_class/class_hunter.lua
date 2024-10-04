@@ -2,7 +2,7 @@
 local CLASS = {}
 
 
--- Some console variables to modify the movement of props --
+-- Some console variables to modify the movement of hunters --
 
 CreateConVar("ph_hunter_walkspeed","230", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
 CreateConVar("ph_hunter_runspeed","250", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
@@ -11,11 +11,10 @@ CreateConVar("ph_hunter_jumppower","200", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
 
 -- Some settings for the class
 CLASS.DisplayName			= "Hunter"
-CLASS.WalkSpeed 			= GetConVar("ph_hunter_walkspeed")
 CLASS.CrouchedWalkSpeed 	= 0.2
-CLASS.RunSpeed				= GetConVar("ph_hunter_runspeed")
+
 CLASS.DuckSpeed				= 0.2
-CLASS.JumpPower				= GetConVar("ph_hunter_jumppower")
+
 CLASS.DrawTeamRing			= false
 
 
@@ -67,6 +66,10 @@ function CLASS:OnSpawn(pl)
 		timer.Simple(2, lockfunc)
 		timer.Simple(unlock_time, unlockfunc)
 	end
+
+	CLASS.WalkSpeed 			= GetConVar("ph_hunter_walkspeed")
+	CLASS.RunSpeed				= GetConVar("ph_hunter_runspeed")
+	CLASS.JumpPower				= GetConVar("ph_hunter_jumppower")
 end
 
 
