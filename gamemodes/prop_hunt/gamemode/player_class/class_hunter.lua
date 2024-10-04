@@ -4,9 +4,11 @@ local CLASS = {}
 
 -- Some console variables to modify the movement of hunters --
 
-CreateConVar("ph_hunter_walkspeed","230", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
-CreateConVar("ph_hunter_runspeed","250", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
-CreateConVar("ph_hunter_jumppower","200", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
+CVAR_SERVER_ONLY_NO_NOTIFY 	= FCVAR_REPLICATED + FCVAR_ARCHIVE
+
+CreateConVar("ph_hunter_walkspeed","230", CVAR_SERVER_ONLY_NO_NOTIFY )
+CreateConVar("ph_hunter_runspeed","250", CVAR_SERVER_ONLY_NO_NOTIFY )
+CreateConVar("ph_hunter_jumppower","200", CVAR_SERVER_ONLY_NO_NOTIFY )
 
 
 -- Some settings for the class

@@ -4,9 +4,11 @@ local CLASS = {}
 
 -- Some console variables to modify the movement of props --
 
-CreateConVar("ph_prop_walkspeed","250", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
-CreateConVar("ph_prop_runspeed","270", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
-CreateConVar("ph_prop_jumppower","200", {FCVAR_REPLICATED, FCVAR_ARCHIVE} )
+CVAR_SERVER_ONLY_NO_NOTIFY 	= FCVAR_REPLICATED + FCVAR_ARCHIVE
+
+CreateConVar("ph_prop_walkspeed","250", CVAR_SERVER_ONLY_NO_NOTIFY )
+CreateConVar("ph_prop_runspeed","270", CVAR_SERVER_ONLY_NO_NOTIFY )
+CreateConVar("ph_prop_jumppower","200", CVAR_SERVER_ONLY_NO_NOTIFY )
 
 
 -- Some settings for the class

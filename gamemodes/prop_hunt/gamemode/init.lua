@@ -27,6 +27,9 @@ USABLE_PROP_ENTITIES = {
 }
 
 
+CVAR_SERVER_ONLY_NO_NOTIFY 	= FCVAR_REPLICATED + FCVAR_ARCHIVE
+
+
 -- Send the required resources to the client
 for _, taunt in pairs(HUNTER_TAUNTS) do resource.AddFile("sound/"..taunt) end
 for _, taunt in pairs(PROP_TAUNTS) do resource.AddFile("sound/"..taunt) end
@@ -91,7 +94,7 @@ addModel("combineelite")
 addModel("police")
 
 -- Enable usage of default models
-local default_hunter_models = CreateConVar("ph_default_hunter_models","0",{FCVAR_REPLICATED, FCVAR_ARCHIVE},0,1)
+local default_hunter_models = CreateConVar("ph_default_hunter_models", "0", CVAR_SERVER_ONLY_NO_NOTIFY, "Enable/Disable default hunter models", 0, 1)
 
 function GM:PlayerSetModel(pl)
 	-- set antlion gib small for Prop model. Do not change into others because this might purposed as a hitbox.
